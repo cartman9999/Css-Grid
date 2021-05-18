@@ -6,15 +6,12 @@
 
 #container {
     display: grid;
-    /* grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px; */
-    grid-template-columns: repeat(9, 200px);
-    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
     grid-template-areas:
-    "header header header header header header header header header"
-    "dos dos dos . . . . . ."
-    "tres . . . . . . . cuatro"
-    "cinco . seis . . . siete . ocho";
+    ". . ."
+    ". uno dos"
+    ". . .";
     column-gap: 30px;
     row-gap: 25px;
 }
@@ -25,33 +22,20 @@ img {
 }
 
 #image1 {
-    grid-area: header;
+    grid-area: uno;
 }
 
 #image2 {
     grid-area: dos;
 }
 
-#image3 {
-    grid-area: tres;
+body { 
+    background-color: blue;
 }
 
-#image4 {
-    grid-area: cuatro;
-}
 
-#image5 {
-    grid-area: cinco;
-}
-
-#image6 {
-    grid-area: seis;
-}
-
-#image7 {
-    grid-area: siete;
-}
-
-#image8 {
-    grid-area: ocho;
+@media screen and (min-width: 768px) {
+    body {
+        background-color: brown;
+    }
 }
